@@ -1,0 +1,41 @@
+  <div class="panel-title text-center">
+    <h2 class="title">Employee List</h2>
+    <hr />
+  </div>
+<table class='table' *ngIf='employees && employees.length' style="width:100%;text-align:left; border: 3px solid grey;padding: 12px 12px 12px 12px">
+  <thead>
+    <tr>
+      <th> Firstname</th>
+      <th> Lastname</th>
+      <th> Email</th>
+      <th> Address</th>
+      <th> Username</th>
+      <th> Password</th>
+      <th> Gender</th>
+      <th> Qualification</th>
+      <th> Experience</th>
+      <th> LangKnown</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <br/>
+  <tbody>
+    <tr *ngFor='let emp of employees'>
+      <td><a [routerLink]="['/view',emp.id]">{{ emp.firstname }}</a></td>
+      <td>{{ emp.lastname }}</td>
+      <td>{{ emp.email }}</td>
+      <td>{{ emp.address }}</td>
+      <td>{{ emp.username }}</td>
+      <td>{{ emp.password }}</td>
+      <td>{{ emp.gender }}</td>
+      <td>{{ emp.qualification }}</td>
+      <td>{{ emp.experience }}</td>
+      <td>{{ emp.langKnown }}</td>
+      <td><button class="btn btn-info" [routerLink]="['/edit',emp.id]">Edit</button></td>
+      <td><button class="btn btn-danger" (click)="deleteEmp(emp)">Delete</button></td>
+    </tr>
+  </tbody>
+
+</table>
+<br><br>

@@ -1,0 +1,39 @@
+
+
+<div style="position:absolute;left:100px">
+  <h2>
+    {{ data.firstname | capitalize }} {{ data.lastname | capitalize }}
+  </h2>
+</div>
+<br /><br /><br />
+            <div style="position:absolute;left:100px">
+              <dl class="row">
+                <dt class="col-sm-2">Email:</dt>
+                <dd class="col-sm-10">{{data.email}}</dd>
+
+                <dt class="col-sm-2">Address:</dt>
+                <dd class="col-sm-10">{{data.address}}</dd>
+
+                <dt class="col-sm-2">User Name:</dt>
+                <dd class="col-sm-10">{{data.username}}</dd>
+
+                <dt class="col-sm-2">Password:</dt>
+                <dd class="col-sm-10">{{data.password}}</dd>
+
+                <dt class="col-sm-2">Gender:</dt>
+                <dd class="col-sm-10">{{data.gender}}</dd>
+
+                <dt class="col-sm-2">Qualification:</dt>
+                <dd class="col-sm-10">{{data.qualification | capitalize}}</dd>
+
+                <dt class="col-sm-2">Experience:</dt>
+                <dd class="col-sm-10">{{data.experience}}</dd>
+
+                <dt class="col-sm-2">Coding Languages:</dt>
+                <dd class="col-sm-10">{{data.langKnown}}</dd>
+              </dl>
+            
+              <div>
+                <button class="btn btn-warning" [routerLink]="['/list']">Back To List</button>
+              </div>
+            </div>
